@@ -25,8 +25,8 @@ async function shipProduct({ productId, name, addr, zip }) {
       key: SHIPIT_API_KEY
     },
   });
-
+  console.log("#############", resp.data);
   return resp.data.receipt.shipId;
 }
 
-module.exports = { shipProduct };
+module.exports = { shipProduct, SHIPIT_SHIP_URL };
